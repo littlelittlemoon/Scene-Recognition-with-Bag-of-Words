@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href=http://fonts.googleapis.com/css?family=Nunito:300|Crimson+Text|Droid+Sans+Mono rel=stylesheet type=text/css>
+<style type="text/css">
+body {
+  margin: 0px;
+  width: 100%;
+  font-family: Crimson Text, serif;
+  background: #fcfcfc;
+}
+table td {
+  text-align: center;
+  vertical-align: middle;
+}
+h1 {
+  font-family: Nunito, sans-serif;
+  font-weight: normal;
+  font-size: 28px;
+  margin: 25px 0px 0px 0px;
+  text-transform: lowercase;
+}
+.container {
+  margin: 0px auto 0px auto;
+  width: 1160px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+
+<center>
+<h1>Scene classification results visualization</h1>
+<img src="confusion_matrix.png">
+
+<br>
+Accuracy (mean of diagonal of confusion matrix) is 0.233
+<p>
+
+<table border=0 cellpadding=4 cellspacing=1>
+<tr>
+<th>Category name</th>
+<th>Accuracy</th>
+<th colspan=2>Sample training images</th>
+<th colspan=2>Sample true positives</th>
+<th colspan=2>False positives with true label</th>
+<th colspan=2>False negatives with wrong predicted label</th>
+</tr>
+<tr>
+<td>Kitchen</td>
+<td>0.160</td>
+<td bgcolor=LightBlue><img src="thumbnails/Kitchen_image_0202.jpg" width=75 height=81></td>
+<td bgcolor=LightBlue><img src="thumbnails/Kitchen_image_0165.jpg" width=75 height=50></td>
+<td bgcolor=LightGreen><img src="thumbnails/Kitchen_image_0090.jpg" width=75 height=50></td>
+<td bgcolor=LightGreen><img src="thumbnails/Kitchen_image_0012.jpg" width=75 height=56></td>
+<td bgcolor=LightCoral><img src="thumbnails/Kitchen_image_0057.jpg" width=75 height=54><br><small>Office</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/Kitchen_image_0353.jpg" width=75 height=75><br><small>OpenCountry</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Kitchen_image_0119.jpg" width=75 height=100><br><small>Industrial</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Kitchen_image_0110.jpg" width=75 height=56><br><small>Store</small></td>
+</tr>
+<tr>
+<td>Store</td>
+<td>0.320</td>
+<td bgcolor=LightBlue><img src="thumbnails/Store_image_0108.jpg" width=75 height=56></td>
+<td bgcolor=LightBlue><img src="thumbnails/Store_image_0244.jpg" width=75 height=56></td>
+<td bgcolor=LightGreen><img src="thumbnails/Store_image_0283.jpg" width=75 height=49></td>
+<td bgcolor=LightGreen><img src="thumbnails/Store_image_0196.jpg" width=75 height=56></td>
+<td bgcolor=LightCoral><img src="thumbnails/Store_image_0232.jpg" width=75 height=75><br><small>TallBuilding</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/Store_image_0192.jpg" width=75 height=75><br><small>InsideCity</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Store_image_0220.jpg" width=75 height=50><br><small>Highway</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Store_image_0022.jpg" width=75 height=64><br><small>TallBuilding</small></td>
+</tr>
+<tr>
+<td>Bedroom</td>
+<td>0.160</td>
+<td bgcolor=LightBlue><img src="thumbnails/Bedroom_image_0178.jpg" width=75 height=50></td>
+<td bgcolor=LightBlue><img src="thumbnails/Bedroom_image_0136.jpg" width=75 height=60></td>
+<td bgcolor=LightGreen><img src="thumbnails/Bedroom_image_0047.jpg" width=75 height=56></td>
+<td bgcolor=LightGreen><img src="thumbnails/Bedroom_image_0004.jpg" width=75 height=56></td>
+<td bgcolor=LightCoral><img src="thumbnails/Bedroom_image_0198.jpg" width=75 height=56><br><small>Kitchen</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/Bedroom_image_0190.jpg" width=75 height=54><br><small>Industrial</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Bedroom_image_0092.jpg" width=75 height=49><br><small>TallBuilding</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Bedroom_image_0182.jpg" width=75 height=57><br><small>Office</small></td>
+</tr>
+<tr>
+<td>LivingRoom</td>
+<td>0.620</td>
+<td bgcolor=LightBlue><img src="thumbnails/LivingRoom_image_0164.jpg" width=75 height=57></td>
+<td bgcolor=LightBlue><img src="thumbnails/LivingRoom_image_0157.jpg" width=75 height=58></td>
+<td bgcolor=LightGreen><img src="thumbnails/LivingRoom_image_0187.jpg" width=75 height=50></td>
+<td bgcolor=LightGreen><img src="thumbnails/LivingRoom_image_0227.jpg" width=75 height=51></td>
+<td bgcolor=LightCoral><img src="thumbnails/LivingRoom_image_0185.jpg" width=75 height=50><br><small>Industrial</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/LivingRoom_image_0129.jpg" width=75 height=56><br><small>Kitchen</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/LivingRoom_image_0224.jpg" width=75 height=56><br><small>Highway</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/LivingRoom_image_0126.jpg" width=75 height=100><br><small>Mountain</small></td>
+</tr>
+<tr>
+<td>Office</td>
+<td>0.150</td>
+<td bgcolor=LightBlue><img src="thumbnails/Office_image_0036.jpg" width=75 height=50></td>
+<td bgcolor=LightBlue><img src="thumbnails/Office_image_0178.jpg" width=75 height=46></td>
+<td bgcolor=LightGreen><img src="thumbnails/Office_image_0100.jpg" width=75 height=42></td>
+<td bgcolor=LightGreen><img src="thumbnails/Office_image_0096.jpg" width=75 height=50></td>
+<td bgcolor=LightCoral><img src="thumbnails/Office_image_0146.jpg" width=75 height=100><br><small>Industrial</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/Office_image_0093.jpg" width=75 height=75><br><small>Highway</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Office_image_0126.jpg" width=75 height=52><br><small>Store</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Office_image_0157.jpg" width=75 height=49><br><small>LivingRoom</small></td>
+</tr>
+<tr>
+<td>Industrial</td>
+<td>0.070</td>
+<td bgcolor=LightBlue><img src="thumbnails/Industrial_image_0257.jpg" width=75 height=56></td>
+<td bgcolor=LightBlue><img src="thumbnails/Industrial_image_0043.jpg" width=75 height=81></td>
+<td bgcolor=LightGreen><img src="thumbnails/Industrial_image_0132.jpg" width=75 height=111></td>
+<td bgcolor=LightGreen><img src="thumbnails/Industrial_image_0154.jpg" width=75 height=46></td>
+<td bgcolor=LightCoral><img src="thumbnails/Industrial_image_0223.jpg" width=75 height=75><br><small>Forest</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/Industrial_image_0041.jpg" width=75 height=75><br><small>Highway</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Industrial_image_0108.jpg" width=75 height=56><br><small>Suburb</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Industrial_image_0079.jpg" width=75 height=56><br><small>Highway</small></td>
+</tr>
+<tr>
+<td>Suburb</td>
+<td>0.090</td>
+<td bgcolor=LightBlue><img src="thumbnails/Suburb_image_0204.jpg" width=75 height=50></td>
+<td bgcolor=LightBlue><img src="thumbnails/Suburb_image_0211.jpg" width=75 height=50></td>
+<td bgcolor=LightGreen><img src="thumbnails/Suburb_image_0088.jpg" width=75 height=50></td>
+<td bgcolor=LightGreen><img src="thumbnails/Suburb_image_0034.jpg" width=75 height=50></td>
+<td bgcolor=LightCoral><img src="thumbnails/Suburb_image_0150.jpg" width=75 height=62><br><small>Office</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/Suburb_image_0324.jpg" width=75 height=75><br><small>TallBuilding</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Suburb_image_0181.jpg" width=75 height=50><br><small>TallBuilding</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Suburb_image_0033.jpg" width=75 height=50><br><small>TallBuilding</small></td>
+</tr>
+<tr>
+<td>InsideCity</td>
+<td>0.110</td>
+<td bgcolor=LightBlue><img src="thumbnails/InsideCity_image_0305.jpg" width=75 height=75></td>
+<td bgcolor=LightBlue><img src="thumbnails/InsideCity_image_0080.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/InsideCity_image_0219.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/InsideCity_image_0241.jpg" width=75 height=75></td>
+<td bgcolor=LightCoral><img src="thumbnails/InsideCity_image_0230.jpg" width=75 height=56><br><small>LivingRoom</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/InsideCity_image_0013.jpg" width=75 height=56><br><small>Bedroom</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/InsideCity_image_0043.jpg" width=75 height=75><br><small>Kitchen</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/InsideCity_image_0196.jpg" width=75 height=75><br><small>LivingRoom</small></td>
+</tr>
+<tr>
+<td>TallBuilding</td>
+<td>0.180</td>
+<td bgcolor=LightBlue><img src="thumbnails/TallBuilding_image_0186.jpg" width=75 height=75></td>
+<td bgcolor=LightBlue><img src="thumbnails/TallBuilding_image_0318.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/TallBuilding_image_0009.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/TallBuilding_image_0220.jpg" width=75 height=75></td>
+<td bgcolor=LightCoral><img src="thumbnails/TallBuilding_image_0142.jpg" width=75 height=60><br><small>Bedroom</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/TallBuilding_image_0141.jpg" width=75 height=75><br><small>Forest</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/TallBuilding_image_0246.jpg" width=75 height=75><br><small>LivingRoom</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/TallBuilding_image_0190.jpg" width=75 height=75><br><small>LivingRoom</small></td>
+</tr>
+<tr>
+<td>Street</td>
+<td>0.150</td>
+<td bgcolor=LightBlue><img src="thumbnails/Street_image_0059.jpg" width=75 height=75></td>
+<td bgcolor=LightBlue><img src="thumbnails/Street_image_0160.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/Street_image_0193.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/Street_image_0291.jpg" width=75 height=75></td>
+<td bgcolor=LightCoral><img src="thumbnails/Street_image_0006.jpg" width=75 height=50><br><small>Bedroom</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/Street_image_0195.jpg" width=75 height=50><br><small>Suburb</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Street_image_0091.jpg" width=75 height=75><br><small>Bedroom</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Street_image_0278.jpg" width=75 height=75><br><small>Bedroom</small></td>
+</tr>
+<tr>
+<td>Highway</td>
+<td>0.400</td>
+<td bgcolor=LightBlue><img src="thumbnails/Highway_image_0193.jpg" width=75 height=75></td>
+<td bgcolor=LightBlue><img src="thumbnails/Highway_image_0114.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/Highway_image_0146.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/Highway_image_0133.jpg" width=75 height=75></td>
+<td bgcolor=LightCoral><img src="thumbnails/Highway_image_0007.jpg" width=75 height=56><br><small>Bedroom</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/Highway_image_0285.jpg" width=75 height=56><br><small>Industrial</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Highway_image_0087.jpg" width=75 height=75><br><small>Store</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Highway_image_0020.jpg" width=75 height=75><br><small>Store</small></td>
+</tr>
+<tr>
+<td>OpenCountry</td>
+<td>0.030</td>
+<td bgcolor=LightBlue><img src="thumbnails/OpenCountry_image_0247.jpg" width=75 height=75></td>
+<td bgcolor=LightBlue><img src="thumbnails/OpenCountry_image_0124.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/OpenCountry_image_0356.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/OpenCountry_image_0351.jpg" width=75 height=75></td>
+<td bgcolor=LightCoral><img src="thumbnails/OpenCountry_image_0120.jpg" width=75 height=50><br><small>Suburb</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/OpenCountry_image_0035.jpg" width=75 height=75><br><small>TallBuilding</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/OpenCountry_image_0031.jpg" width=75 height=75><br><small>LivingRoom</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/OpenCountry_image_0352.jpg" width=75 height=75><br><small>Forest</small></td>
+</tr>
+<tr>
+<td>Coast</td>
+<td>0.480</td>
+<td bgcolor=LightBlue><img src="thumbnails/Coast_image_0231.jpg" width=75 height=75></td>
+<td bgcolor=LightBlue><img src="thumbnails/Coast_image_0203.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/Coast_image_0018.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/Coast_image_0036.jpg" width=75 height=75></td>
+<td bgcolor=LightCoral><img src="thumbnails/Coast_image_0027.jpg" width=75 height=75><br><small>Street</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/Coast_image_0183.jpg" width=75 height=75><br><small>OpenCountry</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Coast_image_0024.jpg" width=75 height=75><br><small>Mountain</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Coast_image_0046.jpg" width=75 height=75><br><small>Bedroom</small></td>
+</tr>
+<tr>
+<td>Mountain</td>
+<td>0.400</td>
+<td bgcolor=LightBlue><img src="thumbnails/Mountain_image_0302.jpg" width=75 height=75></td>
+<td bgcolor=LightBlue><img src="thumbnails/Mountain_image_0220.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/Mountain_image_0191.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/Mountain_image_0221.jpg" width=75 height=75></td>
+<td bgcolor=LightCoral><img src="thumbnails/Mountain_image_0183.jpg" width=75 height=50><br><small>Suburb</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/Mountain_image_0098.jpg" width=75 height=50><br><small>Suburb</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Mountain_image_0286.jpg" width=75 height=75><br><small>LivingRoom</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Mountain_image_0037.jpg" width=75 height=75><br><small>Highway</small></td>
+</tr>
+<tr>
+<td>Forest</td>
+<td>0.170</td>
+<td bgcolor=LightBlue><img src="thumbnails/Forest_image_0015.jpg" width=75 height=75></td>
+<td bgcolor=LightBlue><img src="thumbnails/Forest_image_0282.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/Forest_image_0024.jpg" width=75 height=75></td>
+<td bgcolor=LightGreen><img src="thumbnails/Forest_image_0222.jpg" width=75 height=75></td>
+<td bgcolor=LightCoral><img src="thumbnails/Forest_image_0254.jpg" width=75 height=56><br><small>Store</small></td>
+<td bgcolor=LightCoral><img src="thumbnails/Forest_image_0222.jpg" width=75 height=75><br><small>Street</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Forest_image_0085.jpg" width=75 height=75><br><small>Coast</small></td>
+<td bgcolor=#FFBB55><img src="thumbnails/Forest_image_0026.jpg" width=75 height=75><br><small>Store</small></td>
+</tr>
+<tr>
+<th>Category name</th>
+<th>Accuracy</th>
+<th colspan=2>Sample training images</th>
+<th colspan=2>Sample true positives</th>
+<th colspan=2>False positives with true label</th>
+<th colspan=2>False negatives with wrong predicted label</th>
+</tr>
+</table>
+</center>
+
+
+</div>
+</body>
+</html>
